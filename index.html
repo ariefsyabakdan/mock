@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SOAL 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid blanchedalmond;
+        border-collapse: collapse;
+        padding: 10px;
+      }
 
+      form {
+        width: auto;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+
+      <fieldset>
+        <legend>Input Data</legend>
+        <table>
+          <td>
+            <input type="text" name="name" id="userName" placeholder="Username" />
+          </td>
+          <td>
+            <input
+              type="text"
+              name="email"
+              id="emailInput"
+              placeholder="Email"
+            />
+          </td>
+          <td><select name="text" id="role"></select></td>
+        </table>
+        <p><input type="button" value="Input" onclick="funInputData()" /></p>
+      </fieldset>
+
+    
+      <fieldset>
+        <legend>Tabel Data</legend>
+        <table id="myTable">
+          <thead>
+            <th>No</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th colspan="2">Action</th>
+          </thead>
+          <tbody id="render"></tbody>
+        </table>
+      </fieldset>
+
+    <input type="text" onkeyup="record(event,1)">
+    <script defer src="./app.js"></script>
+  </body>
+</html>
