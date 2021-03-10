@@ -236,3 +236,5 @@ function addUser(e) {
 }
 
 showTable();
+
+console.log('finished')
