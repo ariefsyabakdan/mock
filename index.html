@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 3px;
+        }
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PATTERN</h1>
+    <input type="text" id="inputNumber" placeholder="masukkan angka" onkeyup="funInputNumber()">
+    <br>
+    <input type="button" value="GANJIL" id="ganjil" onclick="resultGanjil()">
+    <input type="button" value="HURUF" id="huruf" onclick="resultHuruf()">
+    <h1>Result</h1>
+    <h3 id="renderResult"></h3>
 
+    <!-- FIBONANCI
+    <h1>DERET FIBONANCI</h1>
+    <label>Masukkan angka:</label>
+    <input type="text" id="inputNumber" placeholder="masukkan angka" onkeyup="funInputNumber()">
+    <br>
+    <input type="button" value="SHOW" id="show" onclick="funShow()">
+    <input type="button" value="GANJIL" id="ganjil" onclick="funGanjil()">
+    <input type="button" value="GENAP" id="genap" onclick="funGenap()">
+    <h1>RESULT:</h1> -->
+
+    <br>
+    <br>
+    <!-- PROGRAM -->
+    <h1>FORM USERS</h1>
+    <input type="text" placeholder="username" id="username">
+    <input type="text" placeholder="email" id="email">
+    <label>role</label>
+    <select name="role" id="role">
+    </select>
+    <br>
+    <input type="button" value="ADD USER" onclick="funAddUser()">
+    <br>
+    <h1>USERS DATA</h1>
+    <table id="myTable">
+        <thead>
+            <th>No</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th colspan="2">Action</th>
+        </thead>
+        <tbody id="renderTable"></tbody>
+    </table>
+
+<script src="./app.js"></script>
+</body>
+</html>
