@@ -216,14 +216,23 @@ function addUser(e) {
   let role = document.getElementById("InputRole").value;
   let no = usersData.length + 1;
 
-  usersData.push({
-    no,
-    userName,
-    email,
-    role,
-  });
+  if (!userName) {
+    alert("tolong isi user name");
+  } else if (!email) {
+    alert("tolong isi email");
+  } else {
+    usersData.push({
+      no,
+      userName,
+      email,
+      role,
+    });
 
-  showTable();
+    document.getElementById("InputUserName").value = "";
+    document.getElementById("InputEmail").value = "";
+
+    showTable();
+  }
 }
 
 showTable();
