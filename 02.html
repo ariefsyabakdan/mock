@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DERET FIBONANCI :</h1>
+    <input type="text" name="txtInput" id="txtInput" placeholder="Masukkan Angka "><br><br>
+    <button id="btn3" onclick="show()">SHOW</button>
+    <button id="btn1" onclick="ganjil()">GANJIL</button>
+    <button id="btn2" onclick="genap()">GENAP</button>
+    <br>
+    <h1>RESULT :</h1>
+    <p id="output"></p>
+    <script>
+        function fibonanci(number){
+            let numberList = [1,1,2,3,5,8,13,21,34,55,89,146]
+            for(let i = 1; i<=number;i++){
+                if(i<=2){
+                    numberList.push(1)
+                } else {
+                    numberList.push(numberList[i-3]+numberList[i=2])
+                }
+            }
+            return numberList[numberList-1]
+        }
+        console.log(fibonanci(100))
+    </script>
+</body>
+</html>

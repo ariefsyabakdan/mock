@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>PATTERN :</h1>
+    <input type="text" name="txtInput" id="txtInput" placeholder="Masukkan Angka "><br><br>
+    <button id="btn1" onclick="ganjil()">GANJIL</button>
+    <button id="btn1" onclick="huruf()">HURUF</button>
+    <br>
+    <h1>RESULT :</h1>
+    <p id="output"></p>
+
+    <script>
+        function ganjil() {
+            var n = document.getElementsByTagName("input")[0].value;
+            var result = "";
+            var pElement = document.getElementById("output");
+            console.log(pElement)
+            for (var i = 1; i <= n; i++) {
+                for (var j = 0; j < i; j++) {
+                    if(j % 2 == 1){
+                        var ganjil = j
+                    }
+                    result += `${ganjil}`;
+                }
+                result += "<br>";
+            }
+            pElement.innerHTML = result;
+        }
+        ganjil();
+        function huruf(){
+            var n = document.getElementsByTagName("input")[0].value;
+            var result = "";
+            var pElement = document.getElementById("output");
+            console.log(pElement)
+            for (var i = 1; i <= n; i++) {
+                for (var j = 0; j < i; j++) {
+                    if(j % 2 == 1){
+                        var ganjil = i
+                    }
+                    result += `${ganjil}`;
+                }
+                result += "<br>";
+            }
+            pElement.innerHTML = result;
+        }
+        huruf();
+    </script>
+</body>
+
+</html>
