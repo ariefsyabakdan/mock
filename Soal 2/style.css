@@ -1,0 +1,23 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#soal{
+  padding: 10px;
+  margin-bottom: 0px;
+}
+#soal *{
+  margin: 5px;
+}
+#jawaban{
+  padding: 10px;
+}
+#jawaban *{
+  margin: 5px;
+}
+#result{
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  max-width: fit-content;
+}
