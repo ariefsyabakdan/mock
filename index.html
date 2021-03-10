@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam - Fundamental</title>
+</head>
+<body>
 
+    <!-- Nomor 1. -->
+
+        <h1>PATTERN</h1>
+
+            <tr>    
+                <td><input type="text" id="postNum" placeholder="Masukan Angka"></td>
+                <br><br>
+                <td><input type="button" id="tombolGanjil" value="GANJIL" onclick="hasilAngka()">
+                <td><input type="button" id="tombolHuruf" value="HURUF"></td>
+            </tr>
+
+        <h1>RESULT :</h1>
+
+            <h1 id="result">
+
+                
+
+            </h1>
+
+    <!-- End oF Nomor 1. -->
+
+    <!-- Nomor 2 -->
+
+        <h1>DERET FIBONANCI</h1>
+            <tr>
+                <td>Masukan Angka : <input type="text" name="" id="angkaFibo"><td>
+                    <br><br>
+                <td><input type="button" value="Show" id="show" onclick="fibonacci(val)"></td>
+                <td><input type="button" value="Ganjil" id="Ganjil"></td>
+                <td><input type="button" value="Genap" id="Genap"></td>
+            </tr>
+
+        <h1>RESULT : </h1>
+            <p id="resultFibo">
+
+
+
+
+            </p>
+
+    <!-- End Of Nomor 2 -->
+
+    <!-- Nomor 3 -->
+
+
+            <h1>FORM USERS</h1>
+
+            <input type="text" name="" id="username" placeholder="Username">
+            <input type="text" name="" id="email" placeholder="email">
+            role : <select id="role" value="user">user</select>
+            
+            <br>
+            <br>
+
+            <input type="button" value="ADD USER" id="addButton" onclick="inputData()">
+
+
+            <h2>ADD USERS</h2>
+
+            <table>
+
+            <thead>
+                <tbody>
+
+                    <tr>
+                        <th>Username</th>
+                        <th>email</th>
+                        <th>role</th>
+                    </tr>
+
+                </tbody>
+            </thead>
+
+
+            <tbody id="writeFill">
+                <tr>
+
+
+
+                </tr>
+            </tbody>
+        </table>
+
+
+    <!-- End Of Nomor 3 -->
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
