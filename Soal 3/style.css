@@ -1,0 +1,20 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+table, td, th {
+  border: 2px solid black;
+  padding: 5px;
+}
+table{
+  border-collapse: collapse;
+}
+#soal{
+  padding: 10px;
+}
+#soal input{
+  margin: 10px 0px;
+}
+#jawaban{
+  padding: 10px;
+}
