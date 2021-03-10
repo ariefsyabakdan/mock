@@ -21,10 +21,9 @@ var elForm = document.getElementById('elForm')
 elForm.addEventListener('submit', submitForm, false)
 var btnAdd = document.getElementById('btnAdd')
 btnAdd.addEventListener('click', addUser, false)
-var btnDelete = document.getElementById('deleteUser')
-btnDelete.addEventListener('click', delUser, false)
 
-function delUser(e){
+function deleteUser(e){
+  // e.preventDefault()
   let inUser = parseInt(e.target.parentElement.parentElement.childNodes[1].textContent) - 1
   users.splice(inUser, 1)
   getUsers(users)
@@ -53,7 +52,7 @@ function getUsers(users){
       <td>${val.username}</td>
       <td>${val.email}</td>
       <td>${val.role}</td>
-      <td><button id="editUser">EDIT</button> <button id="deleteUser">DELETE</button></td>
+      <td><button id="editUser">EDIT</button> <button onclick="deleteUser(event)">DELETE</button></td>
     </tr>
     `
   })
