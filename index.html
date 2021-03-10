@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Ujian</title>
+    <style>
+        form {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        table th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <!-- INPUT -->
+        <h2>FORM USERS</h2>
+        <table>
+            <td><input type="text" id="userName" placeholder="username" /></td>
+            <td><input type="email" id="email" onkeyup="funformusers()" placeholder="email" /></td>
+            <td>
+                <p> role:
+                    <select 
+                    name="role" 
+                    id="roleInput"></select>
+                </p>
+            </td>
+        
+        </table>
+        <p><input type="button" value="ADD USER" onclick="funAddUser()" /></p>
+
+        <!-- RENDER -->
+        <hr>
+        <h2>USERS DATA</h2>
+        <table id="myTable">
+            <thead>
+                <th>No</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th colspan="2">Action</th>
+            </thead>
+            <tbody id="renderData"></tbody>
+        </table>
+    </form>
+
+    <script src="./app.js"></script>
+</body>
+</html>
