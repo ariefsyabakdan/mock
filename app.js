@@ -1,124 +1,321 @@
 // No. 1
 
-// function hasilAngka() {
+function hasilAngka() {
 
-//     let postNumber = document.getElementById("postNum").value;
+    let postNumber = document.getElementById("postNum").value;
 
-//     var space = " "
-//     var angka = 3
-//     var array = [1,3,5,7,9,11]
+    let space = " "
+    let angka = 4
+    let array = [1,3,5,7,9,11]
 
-//     let intPost = parseInt(postNumber)
+    let intPost = parseInt(postNumber)
     
-//     if(intPost === angka) {
+    if (intPost <= angka && intPost !== -1) {
 
-//         space += `${array[0]}`
-//         space += `${array[1], array[2]}`
-//         space += `${array[3], array[4], array[5]}`            
+        space +=  `<p>${array[0]}</p>
+                   <p>${array[1]} ${array[2]}</p>
+                   <p>${array[3]} ${array[4]} ${array[5]}</p>`
 
-//     }
+    }
 
-//     return space;
+    let input = `${space}`
 
-//     }
+    document.getElementById("result").innerHTML = input;
 
-//     document.getElementById("result").innerHTML = space;
-
-    // for(let i=0; i < num; i++) {
-
-    //     if(num % 2 == 1) {
-
-    //         space += postNumber[i]
-
-    //     }
-    //  }
-
-    // let input = `${space}`
-
-    // document.getElementById("result").innerHTML = input;
+  }
 
 
+  function hasilHuruf() {
+
+      let postHuruf = document.getElementById("postNum").value;
+
+      let angka = 4;
+
+      let spaces = " ";
+
+      let array = ["B","D","F","H","J","L"]
+
+      let intHuruf = parseInt(postHuruf)
+
+      if(intHuruf <= angka && intHuruf !== -1) {
+
+              spaces += `<p>${array[0]}</p>
+                         <p>${array[1]} ${array[2]}</p>
+                         <p>${array[3]} ${array[4]} ${array[5]}</p>`
+        }
+    
+      let input = `${spaces}`
+
+      document.getElementById("result").innerHTML = input; 
+    
+    }
 
 // No. 2
 
-// function fibonacci(val) {
+function fibonacci() {
 
-//     // let inputFibo = document.getElementById("angkaFibo").value;
+  let postFibo = document.getElementById("angkaFibo").value;
 
-//         if (val <= 1) {
-//         return val;
-//         } 
-        
-//         else {
-//         return fibo(val - 1) + fibo(val - 2);
-//         }
+  let intFibo = parseInt(postFibo)
 
-//   }
+  let space = " "
 
+  let arrayFibo = [];
+
+  arrayFibo[0] = 0
+
+  arrayFibo[1] = 1
+
+    for(let i=2; i <= intFibo ; i++) {
+
+      if (intFibo !== -1) {
+
+       arrayFibo[i] = arrayFibo[i-2] + arrayFibo[i-1]
+    
+      }
+    } 
+
+    let filterFibo = arrayFibo.filter(value=>{
+
+      return value < intFibo
+
+    })
+
+    space += `${filterFibo} <hr>`
+
+    document.getElementById("resultFibo").innerHTML = space;
+
+  }
+
+// Fibo Ganjil
+
+  function fiboGanjil() {
+
+    let postFibo = document.getElementById("angkaFibo").value;
   
-//   document.getElementById("resultFibo").innerHTML;
+    let intFibo = parseInt(postFibo)
+    
+    let arrayFibo = [];
+  
+    arrayFibo[0] = 0
+  
+    arrayFibo[1] = 1
+  
+      for(let i=2; i <= intFibo ; i++) {
+  
+        if (intFibo !== -1) {
+  
+         arrayFibo[i] = arrayFibo[i-2] + arrayFibo[i-1]
+      
+        }
+      } 
+  
+      let filterGanjil = arrayFibo.filter(value=>{
 
+        return value % 2 == 1 && value < intFibo
+  
+      })
+  
+      let sumGanjil = filterGanjil.reduce(function(a,b) {
+
+          return a + b;
+      })
+
+      let input = `${filterGanjil.join(" + ")} = ${sumGanjil}`
+  
+      document.getElementById("resultFibo").innerHTML = input;
+
+  }
+
+
+  // Fibo Genap
+
+  function fiboGenap() {
+
+    let postFibo = document.getElementById("angkaFibo").value;
+  
+    let intFibo = parseInt(postFibo)
+    
+    let arrayFibo = [];
+  
+    arrayFibo[0] = 0
+  
+    arrayFibo[1] = 1
+  
+      for(let i=2; i <= intFibo ; i++) {
+  
+        if (intFibo !== -1) {
+  
+         arrayFibo[i] = arrayFibo[i-2] + arrayFibo[i-1]
+      
+        }
+      } 
+  
+      let filterGenap = arrayFibo.filter(value=>{
+
+        return value % 2 == 0 && value < intFibo
+  
+      })
+  
+      let sumGenap = filterGenap.reduce(function(a,b) {
+
+          return a + b;
+      })
+
+      let input = `${filterGenap.join(" + ")} = ${sumGenap}`
+  
+      document.getElementById("resultFibo").innerHTML = input;
+  
+  }
 
 
 // No. 3
 
+//  Add Users
 
-let userData = [{ 
+let userData = [
+    { 
+    No : 1,
     username:'alee', 
     email:'alee@gmail.com', 
-    role:'admin',
-  },
+    role:'admin'
+    },
 
    { 
+    No : 2,
     username:'jennie', 
     email:'jennie@gmail.com', 
-    role:'user',
+    role:'user'
    },
 
    { 
+    No : 3,
     username:'elsa', 
     email:'elsa@gmail.com', 
-    role:'user',
+    role:'user'
     }
   ] 
 
+let roleArr = ["user","admin"]; 
 
-function showData() {
+function showData(number) {
 
-let textInput = userData.map(value => {
+  if (number) {
 
-return (`<tr>
-          <td>${value.username}</td>
-          <td>${value.email}</td>
-          <td>${value.role}</td>
-        </tr>`)      
-})
+    let textInput = userData.map(value => {
 
-document.getElementById("writeFill").innerHTML = textInput.join("")
+    if (value.No == number) {
+        return `
+            <tr>
+            <td>#</td>
+            <td><input type="text" name="" value="${value.username}" id="editUsername"></td>
+            <td><input type="text" name="" value="${value.email}" id="editEmail"></td>
+            <td><input type="text" name="" value="${value.role}" id="editRole"></td>
+            <td><button onclick="save(${value.No})">SAVE</button> <button onclick="cancel()">CANCEL</button></td>
+            </tr>
+        `
+    }
 
-}
+    else {
 
-function inputData() {
+    return (`<tr>
+              <td>${value.No}</td>
+              <td>${value.username}</td>
+              <td>${value.email}</td>
+              <td>${value.role}</td>
+              <td><input type="button" value="EDIT" id="editUser(${value.No})">
+                  <input type="button" value="DELETE" id="deleteUser(${value.No})">
+              </td>
+            </tr>`)      
+        }
+      })
 
-let username = document.getElementById("username").value;
-let email = document.getElementById("email").value;
-let role = document.getElementById("role").value;
+      document.getElementById("resultUser").innerHTML = textInput.join("");
+   }
 
+   else{
 
-    userData.push({
-        username, email, role
-    })
+    let inputData = userData.map(value=> {
 
+       return `<tr>
+       <td>${value.No}</td>
+       <td>${value.username}</td>
+       <td>${value.email}</td>
+       <td>${value.role}</td>
+       <td><button onclick="editUser(${value.No})">EDIT</button> <button onclick="deleteUser(${value.No})">HAPUS</button></td>
+    </tr>`
+    });
+    document.getElementById("resultUser").innerHTML = inputData.join("");
+ }
 
-document.getElementById("username").value = ""
-document.getElementById("email").value = ""
+      let listRole = roleArr.map(el=>{
+          return `<option value=${el}>${el}</option>`
+        })
 
-showData();
+      document.getElementById("role").innerHTML = listRole.join("")
+  }
 
-}
+      function deleteUser(No) {
+        userData = userData.filter((el) => {
+          return el.No !== No;
+        });
 
+        showData();
+      }
 
+      function editUser(No) {
+        showData(No);
+      }
 
+      function cancel() {
+        showData();
+      }
 
+      function save(number) {
+        let index = userData.findIndex((value) => value.No == number);
+        let username = document.getElementById("editUsername").value;
+        let email = document.getElementById("editEmail").value;
+        let role = document.getElementById("editRole").value;
+
+        userData[index] = {
+          ...userData[index],
+          username,
+          email,
+          role,
+        };
+
+        showData();        
+      }
+
+      function inputData() {
+
+      let username = document.getElementById("username").value;
+      let email = document.getElementById("email").value;
+      let role = document.getElementById("role").value;
+      let No = userData.length + 1;
+
+          if (username, email == ""){
+            alert ("Anda belum menginput di semua field !")
+          }
+
+          else {
+            userData.push({
+              No, username, email, role
+            })
+
+            document.getElementById("username").value = ""
+            document.getElementById("email").value = ""
+            document.getElementById("role").value = ""
+
+          }
+
+          showData();
+      }
+
+      let btn = document.getElementById("addButton");
+      btn.addEventListener("click",inputData)
+
+      
+    showData();
 
 
