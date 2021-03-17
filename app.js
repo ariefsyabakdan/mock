@@ -52,10 +52,6 @@ function makeFibo() {
   let num = 0;
 
   for (let i = 0; i < inputFibonacci; i++) {
-    if (num >= inputFibonacci) {
-      break;
-    }
-
     if (i <= 1) {
       array.push(i);
     } else {
