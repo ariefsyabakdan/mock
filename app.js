@@ -12,7 +12,6 @@ function showGanjil() {
     }
     data.push(numRow);
   }
-
   let listNumber = data.map((el) => {
     return `
       <h3>${el}</h3>
@@ -36,7 +35,7 @@ function showHuruf() {
     }
     data.push(numRow);
   }
-
+  console.log(data)
   let listNumber = data.map((el) => {
     return `
       <h3>${el}</h3>
@@ -87,6 +86,7 @@ function ganjilFibonacci() {
     sum += el;
   });
   let render = oddArray.join(" + ");
+  console.log(oddArray)
   render += ` = ${sum}`;
 
   document.getElementById("resultFibonacci").innerHTML = `<h2>${render}</h2>`;
