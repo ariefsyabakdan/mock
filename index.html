@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
 <head>
     <meta charset="UTF-8">
@@ -48,3 +49,81 @@
 </body>
 
 </html>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    thead,td,tr,th,tbody,table{
+      border: 1px solid grey;
+    }
+    td,th{
+      padding: 5px 10px;
+    }
+  </style>
+  <body>
+    <div class="Pattern">
+      <h1>PATTERN</h1>
+      <input type="number" id="inputPattern" placeholder="masukan angka" />
+      <br />
+      <br />
+      <button onclick="showGanjil()">GANJIL</button>
+      <button onclick="showHuruf()">HURUF</button>
+
+      <div id="resultPattern"></div>
+    </div>
+
+    <hr />
+
+    <div class="Fibonacci">
+      <h1>DERET FIBONACCI</h1>
+      <p>
+        Masukan angka:
+        <input type="number" id="inputFibonacci" placeholder="masukan angka" />
+      </p>
+      <button onclick="showFibonacci()">SHOW</button>
+      <button onclick="ganjilFibonacci()">GANJIL</button>
+      <button onclick="genapFibonacci()">GENAP</button>
+
+      <div id="resultFibonacci"></div>
+    </div>
+
+    <hr />
+
+    <div class="Users">
+      <h1>FORM USERS</h1>
+      <form>
+        <input type="text" placeholder="user name" id="InputUserName" />
+        <input type="email" placeholder="email" id="InputEmail"/>
+        role
+        <select id="InputRole">
+          <option value="admin">admin</option>
+          <option value="user">user</option>
+        </select>
+        <br />
+        <br />
+        <button onclick="addUser(event)">ADD USER</button>
+      </form>
+
+      <h1>USERS DATA</h1>
+
+      <table>
+        <thead>
+          <th>No.</th>
+          <th>User name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th colspan="2">Action</th>
+        </thead>
+
+        <tbody id="renderTable"></tbody>
+      </table>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+>>>>>>> fuzail
